@@ -13,6 +13,7 @@ const {isLoggedIn}=require('./middleware');
 
 const userRoutes=require('./routes/users');
 const { Console } = require('console');
+app.use("/user", userRoutes);
 
 
 const Blood = require('./models/blood');
@@ -30,6 +31,8 @@ mongoose.connect('mongodb+srv://vibhanshu03:vibhanshu03@cluster0.v8llplh.mongodb
 app.engine('ejs', ejsMate);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'))
 app.use(express.static(__dirname + '/public/'));
@@ -69,22 +72,64 @@ app.use((req, res, next) => {
 app.use('/',userRoutes)
 
 
-app.get('/', async (req, res) => {
-    res.render('main/home')
-    // res.send('hello home')
-})
+// app.get('/',isLoggedIn, async (req, res) => {
+//     res.render('main/home')
+//     // res.send('hello home')
+// })
+
+app.get('/', isLoggedIn, async (req, res) => {
+  try {
+    // Get the current user ID from the request object
+    const userId = req.user._id;
+    
+    // Find all posts that have the user's ID as the userId field
+    // const bloods = await Blood.find({ userId: userId }).exec();
+    res.render('main/home',{user:req.user});
+    // localStorage.setItem('userId', userId);
+    // console.log(userId);
+    // Render the posts.ejs template with the posts and user object
+    // res.render('bloods/index', { bloods: bloods, user: req.user });
+  } catch (err) {
+    console.log(err);
+    res.status(500).send('An error occurred');
+  }
+});
+
 // app.get('/bloods/new', (req, res) => {
 //     res.render('bloods/new')
 // })
+var a;
+app.post('/unique', async (req, res) => {
+  // console.log(req.body);
+  fetch('http://localhost:5000/', {
+    method: 'POST',
+    body: req.body,
+  }).then((res) => {
 
-
-
+    // console.log(a);
+    // console.log(res);
+  });
+  res.redirect('/');
+});
+app.post('/bloods', async (req, res) => {
+    const newProduct = new Blood(req.body);
+    await newProduct.save();
+    res.redirect(`/bloods/${newProduct._id}`)
+})
+app.get('/bloods/:id', async (req, res) => {
+    const { id } = req.params;
+    const blood = await Blood.findById(id)
+    res.render('bloods/show', { blood })
+})
 app.get('/authentication', async (req, res) => {
   res.render('authentication');
 });
-app.get('/new', async (req, res) => {
+app.get('/new', isLoggedIn, async (req, res) => {
   res.render('main/newpred');
-})
+});
+app.get('/previous', isLoggedIn, async (req, res) => {
+  res.render('main/preprid');
+});
 
 app.listen(3000, () => {
     console.log("APP IS LISTENING ON PORT 3000!")
