@@ -14,6 +14,7 @@
 //     console.log(error.message);
 //   });
 // });
+console.log("hello world");
 
 // // Check the authentication state
 // auth.onAuthStateChanged(function(user) {
