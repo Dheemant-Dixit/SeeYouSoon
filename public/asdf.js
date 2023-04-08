@@ -30,7 +30,6 @@
 //   }
 // });
 
-// // // Check if the user is logged in or not
 // if (auth.currentUser) {
 //   // User is signed in
 //     console.log("hello");
@@ -94,17 +93,6 @@
 //     //   window.location.href = "login.html";
 //   }
 // }
+console.log("hello");
 
-// firebase.auth().onAuthStateChanged((user) => {
-//   console.log(user);
-//   if (!user) {
-//     // location.replace('login.html');
-//     console.log('sljfls');
-//     document.getElementById('mainbtn').innerHTML = 'LogIn/SignUp';
-//     document.getElementById('maintn').innerHTML = 'LogIn/SignUp';
-//   } else {
-//     document.getElementById('mainbtn').innerHTML = 'LogOut';
-//     document.getElementById('maintn').innerHTML = 'LogOut';
-//     console.log('lds');
-//   }
-// });
+
