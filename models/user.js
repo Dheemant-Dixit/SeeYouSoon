@@ -9,6 +9,7 @@ const UserSchema = new Schema({
         unique: true
     }
 });
+//console.log("digvijay");
 
 UserSchema.plugin(passportLocalMongoose);
 
