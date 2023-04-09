@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Predition</title>
+    <link rel="stylesheet" href="newpred.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="shortcut icon" href="favic.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <header class="header">
+    
+        <a href="#" class="logo lomgo">StockPulse</a>
+        <nav class="nav-items">
+    
+            <a href="/logout" id="mainbtn">LogOut</a>
+            <a href="#">Home</a>
+            <a href="javascript: document.body.scrollIntoView(false);">Contact</a>
+        </nav>
+    </header>
+    <div class="cc">
+
+    </div>
+    <div class="content">
+        <div class="first">Its all about data</div>
+        <div class="second">Track market sentiment in real-time with our advanced machine learning algorithms analyzing social media posts. Stay
+        ahead of the competition and make informed trading decisions based on real data, not guesswork. Start using our powerful
+        sentiment analysis tool today for NASDAQ stocks.</div>
+    </div>
+    <div class="sline"><div class="line"></div></div>
+    <div class="formm">
+        <form action="/unique" method="POST" id="login-form" class="login-form fo" autocomplete="off" role="main">
+            <h1 class="a11y-hidden">Login Form</h1>
+            <!-- <figure aria-hidden="true">
+                <div class="person-body"></div>
+                <div class="neck skin"></div>
+                <div class="head skin">
+                    <div class="eyes"></div>
+                    <div class="mouth"></div>
+                </div>
+                <div class="hair"></div>
+                <div class="ears"></div>
+                <div class="shirt-1"></div>
+                <div class="shirt-2"></div>
+            </figure> -->
+            <div>
+                <label class="label-email">
+                    <input type="text" class="text" name="stock-symbol" placeholder="Stock-symbol" tabindex="1" required />
+                    <span class="required">Stock Symbol</span>
+                </label>
+            </div>
+            <div>
+                <label class="label-password">
+                    <input type="date" class="text" name="start-date" placeholder="Start-date" tabindex="2" required />
+                    <span class="required">Start - Date</span>
+                </label>
+            </div>
+            <div>
+                <label class="label-password">
+                    <input type="date" class="text" name="end-date" placeholder="End-date" tabindex="2" required />
+                    <span class="required">End-Date</span>
+                </label>
+            </div>
+            <button type="submit" class="button">Predict Now</button>
+            
+        </form>
+    </div>
+
+    <!-- <div class="modal">
+        <div class="modal__container">
+            <div class="modal__featured">
+                <button type="button" class="button--transparent button--close">
+                    <svg class="nc-icon glyph" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px"
+                        viewBox="0 0 32 32">
+                        <g>
+                            <path fill="#ffffff"
+                                d="M1.293,15.293L11,5.586L12.414,7l-8,8H31v2H4.414l8,8L11,26.414l-9.707-9.707 C0.902,16.316,0.902,15.684,1.293,15.293z">
+                            </path>
+                        </g>
+                    </svg>
+                    <span class="visuallyhidden">Return to Product Page</span>
+                </button>
+                <div class="modal__circle"></div>
+                <img src="f1jpeg.png" class="modal__product" />
+            </div>
+            <div class="modal__content">
+                <h2>Your Input</h2>
+
+                <form action="/unique" method="POST">
+                    <ul class="form-list">
+                        <li class="form-list__row">
+                            <label>Stock Symbol</label>
+                            <input type="text" name="stock-symbol" required="" value="AMZN" />
+                        </li>
+                        <li class="form-list__row">
+                            <label>Start Date</label>
+                            <div id="input--cc" class="creditcard-icon">
+                                <input type="date" name="start-date" required="" value="2022-08-10" />
+                            </div>
+                        </li>
+                        <li class="form-list__row">
+                            <label>End Date</label>
+                            <div id="input--cc" class="creditcard-icon">
+                                <input type="date" name="end-date" required="" value="2022-08-20" />
+                            </div>
+                        </li>
+                        <li class="form-list_row form-list_row--agree">
+                            <label>
+                                <input type="checkbox" name="save_cc" checked="checked">
+                                Save my card for future purchases
+                            </label>
+                        </li>
+                        <li>
+                            <button type="submit" class="button">Predict Now</button>
+                        </li>
+                    </ul>
+                </form> -->
+            <!-- </div> 
+        </div> 
+    </div>  -->
+
+
+
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="copy">&copy; Developed Under HackFest 23'</div>
+        <div class="bottom-links">
+            <div class="links">
+                <span>Developer</span>
+                <a href="#">Vibhanshu Sharma</a>
+                <a href="#">Digvijay Anand</a>
+                <a href="#">Krish Sahu</a>
+                <a href="#">Dheemant Dixit</a>
+                <a href="#">Himanshu Mittal</a>
+            </div>
+            <div class="links">
+                <span>More Info</span>
+                <a href="#">Home</a>
+                <a href="javascript: document.body.scrollIntoView(false);">About</a>
+                <a href="/authentication" onclick="hh()" id="maintn">LogIn/SignUp</a>
+            </div>
+            <div class="links">
+                <span>Social Links</span>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="newpred.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previous Prediction</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="preprid.css">
+    <link rel="shortcut icon" href="favic.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header class="header">
+    
+        <a href="#" class="logo lomgo">StockPulse</a>
+        <nav class="nav-items">
+    
+            <a href="/logout" id="mainbtn">LogOut</a>
+            <a href="#">Home</a>
+            <a href="javascript: document.body.scrollIntoView(false);">Contact</a>
+        </nav>
+    </header>
+    <div class="cc">
+    
+    </div>
+    <div class="content">
+        <div class="first">Past Prediction(s)</div>
+        <div class="second">Track the accuracy of our predictions and analyze past market trends with our comprehensive archive of past sentiment
+        analysis. Make informed trading decisions based on real-time and historical market sentiment data, giving you a
+        competitive edge in the market.</div>
+    </div>
+    <div class="sline">
+        <div class="line"></div>
+    </div>
+    <ol style="--length: 5" role="list">
+        <% for(let blood of bloods){ %>
+            <li style="--i: 1">
+                <h3> <%= blood["stock-symbol"] %> :: <%= blood["sentiment"] %></h3>
+                <p>  <b>Start-Date</b>   : <%= blood["start-date"] %> </p>
+                <p> <b>End-Date</b>   : <%= blood["end-date"] %></p>
+            </li>
+        <% } %>
+        <!-- <li style="--i: 1">
+            <h3>Discovery and assessment</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Adipiscing diam donec adipiscing tristique risus.</p>
+        </li>
+        <li style="--i: 2">
+            <h3>Information gathering and analysis</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Adipiscing diam donec adipiscing tristique risus.</p>
+        </li>
+        <li style="--i: 3">
+            <h3>Creating your claim</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Adipiscing diam donec adipiscing tristique risus.</p>
+        </li>
+        <li style="--i: 4">
+            <h3>Approvals and submission</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Adipiscing diam donec adipiscing tristique risus.</p>
+        </li>
+        <li style="--i: 5">
+            <h3>Receiving your benefit</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Adipiscing diam donec adipiscing tristique risus.</p>
+        </li> -->
+    </ol>
+
+
+    <!-- <div class="roww">
+        <% for(let blood of bloods){ %>
+            <div>
+                <%= blood["stock-symbol"] %>
+            </div>
+            <div>
+                <%= blood["start-date"] %>
+            </div>
+            <div>
+                <%= blood["end-date"] %>
+            </div>
+            <div>
+                <%= blood["sentiment"] %>
+            </div>
+            <% } %>
+    </div> -->
+    <footer class="footer">
+        <div class="copy">&copy; Developed Under HackFest 23'</div>
+        <div class="bottom-links">
+            <div class="links">
+                <span>Developer</span>
+                <a href="#">Vibhanshu Sharma</a>
+                <a href="#">Digvijay Anand</a>
+                <a href="#">Krish Sahu</a>
+                <a href="#">Dheemant Dixit</a>
+                <a href="#">Himanshu Mittal</a>
+            </div>
+            <div class="links">
+                <span>More Info</span>
+                <a href="#">Home</a>
+                <a href="javascript: document.body.scrollIntoView(false);">About</a>
+                <a href="/authentication" onclick="hh()" id="maintn">LogIn/SignUp</a>
+            </div>
+            <div class="links">
+                <span>Social Links</span>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

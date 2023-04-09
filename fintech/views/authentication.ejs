@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Authentication - Health Predictor </title>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/all.css'>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css'>
+    <link rel="stylesheet" href="/authstyle.css">
+    <link rel="shortcut icon" href="favic.ico" type="image/x-icon">
+    <!-- <link rel="icon" type="image/x-icon" href="/favic.ico"> -->
+</head>
+
+<body>
+    <h2>HackFest 23' SeeYouSoon</h2>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="/register" method="POST" class="validated-form" id="signup-form" novalidate>
+                <h1>Create Account</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your email for registration</span>
+                <input type="text" placeholder="Name" name="username"/>
+                <input type="email" placeholder="Email" id="signup-email" name="email"/>
+                <input type="password" placeholder="Password" id="signup-password" name="password" />
+                <button id="signup-btn">Sign Up</button>
+                <a href="#" class="error" id="signup-error"></a>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="/login" method="POST" class="validated-form"  id="login-form" novalidate >
+                <h1>Log in</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>Enter your email and password</span>
+                <input type="email" placeholder="Email" id="email" name="username" />
+                <input type="password" placeholder="Password" id="password" name="password" />
+                <!-- <a href="#">Forgot your password?</a> -->
+
+                <button id="login-btn">Log In</button>
+                <a href="#" class="error" id ="login-error"></a>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Existing User!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="ghost" id="signIn">Log In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>New User !</h1>
+                    <p>Enter your personal details and start journey with us</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <button id="logout-btn">hello</button> -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+    <script src="/defaut.js"></script> -->
+    <script src="/authscript.js"></script>
+    <!-- <script src="/./routes/users.js"></script> -->
+</body>
+
+</html>

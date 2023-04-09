@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous"
+  /> -->
+
+  <!-- <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"
+  ></script>
+
+  <script
+    src="https://kit.fontawesome.com/91abd10b8f.js"
+    crossorigin="anonymous"
+  ></script> -->
+
+  <!-- <link rel="stylesheet" href="/stylesheets/style.css" />
+  <link rel="stylesheet" href="/stylesheets/index.css" /> -->
+<link rel="stylesheet" href="/bloodreport.css">
+    <title>Blood Report</title>
+</head>
+<body>
+    <!-- <h1 style="text-align: center;">Add New Note</h1> -->
+    <form action="/bloods" id="msform" method="POST">
+        <ul id="progressbar">
+            <li class="active">Haemoglobin</li>
+            <li>DLC</li>
+            <li>ALC</li>
+        </ul>
+    <!-- <div class="form-group">
+        <label for="title" >Product title</label>
+        <input type="number" class="form-control" name="pcv" id="title" placeholder="product title">
+    </div>
+    <div class="form-group">
+        <label for="title" >Product title</label>
+        <input type="number" class="form-control" name="rbcc" id="title" placeholder="product title">
+    </div>
+    <div class="form-group">
+        <label for="title" >Product title</label>
+        <input type="number" class="form-control" name="mcv" id="title" placeholder="product title">
+    </div>
+    <div class="form-group">
+        <label for="title" >Product title</label>
+        <input type="number" class="form-control" name="mch" id="title" placeholder="product title">
+    </div>
+    <div class="form-group">
+        <label for="title" >Product title</label>
+        <input type="number" class="form-control" name="mchc" id="title" placeholder="product title">
+    </div>
+    <div class="form-group">
+        <label for="title" >Product title</label>
+        <input type="number" class="form-control" name="rcdw" id="title" placeholder="product title">
+    </div>
+    <div class="form-group">
+        <label for="title" >Product title</label>
+        <input type="number" class="form-control" name="tlc" id="title" placeholder="product title">
+    </div>
+    <div class="form-group">
+        <label for="title" >Product title</label>
+        <input type="number" class="form-control" name="ntph" id="title" placeholder="product title">
+    </div>
+    <div class="form-group">
+        <label for="title" >Product title</label>
+        <input type="number" class="form-control" name="lmph" id="title" placeholder="product title">
+    </div>
+    <div class="form-group">
+        <label for="title" >Product title</label>
+        <input type="number" class="form-control" name="mcy" id="title" placeholder="product title">
+    </div>
+    <div class="form-group">
+        <label for="title" >Product title</label>
+        <input type="number" class="form-control" name="eosi" id="title" placeholder="product title">
+    </div>
+    <div class="form-group">
+        <label for="title" >Product title</label>
+        <input type="number" class="form-control" name="baso" id="title" placeholder="product title">
+    </div>
+    <div class="form-group">
+        <label for="title" >Product title</label>
+        <input type="number" class="form-control" name="neut" id="title" placeholder="product title">
+    </div>
+    <div class="form-group">
+        <label for="title" >Product title</label>
+        <input type="number" class="form-control" name="lymc" id="title" placeholder="product title">
+    </div>
+    <div class="form-group">
+        <label for="title" >Product title</label>
+        <input type="number" class="form-control" name="mnct" id="title" placeholder="product title">
+    </div>
+    <div class="form-group">
+        <label for="title" >Product title</label>
+        <input type="number" class="form-control" name="eosip" id="title" placeholder="product title">
+    </div>
+    <div class="form-group">
+        <label for="title" >Product title</label>
+        <input type="number" class="form-control" name="pcpc" id="title" placeholder="product title">
+    </div>
+    <div class="form-group">
+        <label for="title" >Product title</label>
+        <input type="number" class="form-control" name="mpv" id="title" placeholder="product title">
+    </div>
+    <div class="form-group">
+        <label for="title" >Product title</label>
+        <input type="number" class="form-control" name="essr" id="title" placeholder="product title">
+    </div>
+     -->
+    <fieldset>
+        <h2 class="fs-title">Haemoglobin (Hb) <img src="/noto_drop-of-blood.png" alt="" width="18px"></h2>
+        <h3 class="fs-subtitle">This is step 1</h3>
+        <input type="number" name="pcv" placeholder="Packed cell volume (&percnt;)" required/>
+        <input type="number" name="rbcc" placeholder="RBC count (Million/cu.mm)" required/>
+        <input type="number" name="mcv" placeholder="Mean Corpuscular volume (fL) " required/>
+        <input type="number" name="mch" placeholder="Mean Corpuscualr Haemoglobin (pg)" required/>
+        <input type="number" name="mchc" placeholder="Mean Corpuscular Hb Concentration (g/dL)" required/>
+        <input type="number" name="rcdw" placeholder="Red Cell Distribution width" required/>
+        <input type="number" name="tlc" placeholder="Total Leucocyte count (TLC &percnt;)" required/>
+        <input type="button" name="next" class="next action-button" value="Next" />
+    </fieldset>
+    <fieldset>
+        <h2 class="fs-title">Differential Leucocyte Count <img src="/openmoji_blood-transfusion.png" alt="" width="30px">
+        </h2>
+        <input type="number" name="ntph" placeholder="Neutrophils (&percnt;)" required/>
+        <input type="number" name="lmph" placeholder="Lymphocytes (&percnt;)" required/>
+        <input type="number" name="mcy" placeholder="Monocytes (&percnt;)" required/>
+        <input type="number" name="eosi" placeholder="Eosinophils (&percnt;)" required/>
+        <input type="number" name="baso" placeholder="Basophils (&percnt;)" required/>
+        <input type="button" name="previous" class="previous action-button" value="Previous" />
+        <input type="button" name="next" class="next action-button" value="Next" />
+    </fieldset>
+    <fieldset>
+        <h2 class="fs-title">Absolute Leucocyte Count <img src="/download.png" alt="" width="50px"></h2>
+        <input type="number" name="neut" placeholder="Neutrophils ( Cells/cu.mm )" required/>
+        <input type="number" name="lymc" placeholder="Lymphocytes ( Cells/cu.mm )" required/>
+        <input type="number" name="mnct" placeholder="Monocytes ( Cells/cu.mm )" required/>
+        <input type="number" name="eosip" placeholder="Eosinophils ( Cells/cu.mm )" required/>
+        <input type="number" name="pcpc" placeholder="Platelets Count ( per cu.mm )" required/>
+        <input type="number" name="mpv" placeholder="Mean Platelets volume ( fL )" required />
+        <input type="number" name="essr" placeholder="ESR ( mm )" required/>
+        <input type="button" name="previous" class="previous action-button" value="Previous" />
+    
+        <!-- <a href="/" class="submit action-button" target="_top">Submit</a> -->
+        <button class="submit action-button">Submit</button>
+    </fieldset>
+        <!-- <button  class="btn btn-success">Submit</button> -->
+    </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="/bloodreport.js"></script>
+
+
+
+    <!-- <script src="/javascripts/main.js"></script> -->
+</body>
+
+</html>
